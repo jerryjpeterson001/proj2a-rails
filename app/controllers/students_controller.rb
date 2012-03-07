@@ -25,4 +25,8 @@ class StudentsController < ApplicationController
       redirect_to :controller => "students", :action => "selectStudent"
     end
   end
+  def editStudent
+    id = params[:student_id]
+    @student = Student.find_by_id(id)
+  end  
 end
