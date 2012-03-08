@@ -13,6 +13,6 @@ development:
   encoding: unicode
   database: proj2a
   pool: 5
-  username: bob
+  username: jerryjp
   password: somepass
 
