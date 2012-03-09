@@ -27,14 +27,9 @@ class StudentsController < ApplicationController
   end
   def editStudent
     id = params[:student_id]
-    @student = Student.find_by_id(id)
-  end
-  def updateStudent
-    id = params[:id]
     fn = params[:first_name]
     ln = params[:last_name]
     maj = params[:major]
-    Student.update(id,{:first_name => fn, :last_name => ln, :major => maj})
-    redirect_to :controller => "students", :action => "index"
+    @student = Student.update(id,{:first_name => fn, :last_name => ln, :major => maj})
   end   
 end
